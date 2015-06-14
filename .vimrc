@@ -2,8 +2,8 @@
 set encoding=utf-8
 
 " load pathogen and bundles
-call pathogen#infect()
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#helptags()
 
 syntax on                         " syntax highlighting is sometimes helpful
 filetype plugin indent on         " enable guessing of filetypes, plugins and indentation
@@ -11,10 +11,11 @@ set autoindent                    " also, autoindent
 set ts=2                          " preferably 2 spaces
 set shiftwidth=2
 set expandtab                     " use spaces, no tab characters
-set relativenumber                " perpare for utter mindfuckage
+" set relativenumber                " perpare for utter mindfuckage
 set showmatch                     " show bracket matchers
 set ignorecase                    " ignore case in searches
 set hlsearch                      " highlight all search matches
+set number                        " linenumbers
 set smartcase                     " case vs CAPS, eternal struggle
 set incsearch                     " search while typing
 set ttimeoutlen=100               " decrease timeout because we're badass
@@ -31,17 +32,17 @@ set noswapfile                    " swap files are ugly as sin
 set backspace=2
 
 " customize status line
-set statusline=%{fugitive#statusline()}%f
+" set statusline=%{fugitive#statusline()}%f
 
 " set dark background and color scheme
-set background=dark
-colorscheme base16-railscasts
+" set background=dark
+" colorscheme base16-railscasts
 
 " custom colors
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
 highlight ColorColumn  ctermbg=237
-highlight LineNr       ctermbg=236 ctermfg=240
+highlight LineNr       ctermbg=236 ctermfg=12
 highlight CursorLineNr ctermbg=236 ctermfg=240
 highlight CursorLine   ctermbg=236
 highlight StatusLineNC ctermbg=238 ctermfg=0
@@ -122,5 +123,5 @@ map<leader>t :call RunNearestTest()<cr>
 " ------------- keymaps ---------------
 map <leader>ev :e $MYVIMRC<cr>
 map <leader>sv :so $MYVIMRC<cr>
-let g:ctrlp_map = '<leader>f' 
-map <leader>7 <plug>NERDCommenterToggle
+" let g:ctrlp_map = '<leader>f' 
+" map <leader>7 <plug>NERDCommenterToggle
